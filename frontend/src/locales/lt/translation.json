@@ -1,0 +1,70 @@
+{
+  "section-title": {
+    "about-me": "Apie mane",
+    "qualifications": "Kvalifikacija",
+    "skills": "Įgūdžiai",
+    "experience": "Patirtis",
+    "education": "Išsilavinimas",
+    "projects": "Projektai",
+    "hobbies": "Hobiai",
+    "contacts": "Kontaktai"
+  },
+  "intro-paragraph": "Esu aistringas Fullstack programuotojas, orientuotas į dinamiškų ir efektyvių žiniatinklio programų kūrimą. Neseniai baigiau 4 mėnesių stažuotę užsienyje, Fullstack pozicijoje, naudojant Laravel ir React, kur įgijau vertingos, praktinės patirties backend ir frontend technologijose.",
+  "qualifications-junior-php": {
+    "title": "Junior PHP programuotojas: ",
+    "description": "Mano pagrindinė vertybė yra backend kūrime, kur turiu tvirtą PHP pagrindą."
+  },
+  "qualifications-front-end-developer": {
+    "title": "Front End programuotojas: ",
+    "description": "Baigiau 3 mėnesių intensyvius kursus susijusius su Frontend - JS(React), kuriuose išmokau kurti labiau interaktyvias vartotojo sąsajas."
+  },
+  "skills": {
+    "backend": {
+      "title": "Backend:",
+      "description": " Įgudęs PHP su tvirtu Laravel karkaso supratimu."
+    },
+    "frontend": {
+      "title": "Frontend: ",
+      "description": "Įgudęs React, kuriant dinamiškas ir interaktyvias žiniatinklio programas."
+    },
+    "fullstack": {
+      "title": "Fullstack",
+      "description": "Patogiai integruojant frontend ir backend komponentus, siekiant sukurti vientisas programas."
+    },
+    "database-management": {
+      "title": "Duomenų bazės valdymas: ",
+      "description": "Patirtis su MySQL ir duomenų bazės projektavimu."
+    },
+    "version-control": {
+      "title": "Versijų valdymas: Į",
+      "description": "gudęs naudoti Git versijų valdymui ir bendradarbiavimui."
+    }
+  },
+  "experience": {
+    "title": "Fullstack junior Programuotojas",
+    "company": "Weborigo",
+    "date": "2023/07 - 2023/11",
+    "responsibilities": {
+      "responsibility-1": "Kurti UI/UX naudojant React biblioteką",
+      "responsibility-2": "Kurti pernaudojamus komponentus",
+      "responsibility-3": "Rašyti backend dalį naudojant Laravel karkasą",
+      "responsibility-4": "Rašyti testus backend (PHP unit)",
+      "responsibility-5": "Kodo valdymas ir versijų kontrolė naudojant Git",
+      "responsibility-6": "Rašyti ir palaikyti švarų kodą"
+    }
+  },
+  "education-php-developer": {
+    "title": "PHP Junior programuotojas",
+    "institution": "Klaipėdos technologijų mokymų centras",
+    "dates": "2022/09 - 2023/07"
+  },
+  "education-frontend-developer": {
+    "title": "Frontend programuotojas (Js/React)",
+    "institution": "CodeAcademy",
+    "dates": "2024/01 - 2024/05"
+  },
+  "projects-tba": "TBA",
+  "contacts-linkedin": "LinkedIn",
+  "contacts-github": "Github",
+  "hobbies-description": "Ne darbo metu, man patinka pasinerti į muziką, kuri padeda atsipalaiduoti ir rasti įkvėpimą mano projektams. Važiavimas motociklu yra dar viena mano aistra: tai suteikia man laisvės ir nuotykių jausmą, leidžiančią išvalyti mintis ir mąstyti kūrybiškai. Taip pat vertinu kokybiškai praleidžiamą laiką su draugais, nesvarbu, ar tai būtų naujų vietų tyrinėjimas, gilių pokalbių vedimas ar tiesiog malonus bendravimas. Šios veiklos ne tik praturtina mano asmeninį gyvenimą, bet ir suteikia subalansuotą perspektyvą mano profesiniams siekiams."
+}

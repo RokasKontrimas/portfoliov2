@@ -1,0 +1,11 @@
+@use '../../assets/partials/responsive' as screen;
+
+
+.mainWrapper {
+  background-color: #1E1E1E;
+  & .sectionsWrapper {
+    & .section {
+      color: whitesmoke;
+    }
+  }
+}

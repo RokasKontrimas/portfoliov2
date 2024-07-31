@@ -1,0 +1,53 @@
+@use '../../../assets/partials/responsive' as screen;
+@use '../../../assets/partials/variables' as v;
+
+.sectionContent {
+  position: relative;
+  height: 100svh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @include screen.sm {
+    flex-direction: column;
+  }
+
+  & .heroImageWrapper {
+    position: relative;
+    min-height: 100svh;
+    padding: 8px;
+    max-width: 100vw;
+
+
+    & > img {
+      //box-shadow: inset -17px 10px 20px 8px;
+      @include screen.sm {
+        right: 100px;
+        position: absolute;
+      }
+      height: 100svh;
+      display: block;
+      width: 100%;
+      object-fit: contain;
+    }
+
+
+  }
+
+  & .heroTitle {
+    //display: flex;
+    //flex-direction: column;
+    //position: absolute;
+    //right: 0;
+    //top: 30%;
+    //animation: blink 1s infinite;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

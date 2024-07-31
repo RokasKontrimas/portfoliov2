@@ -1,0 +1,18 @@
+@use '../../../assets/partials/components/galaxy';
+
+.galaxyWrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 10;
+
+  & .starfield {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    @include galaxy.starfield
+
+  }
+}
+

@@ -1,0 +1,40 @@
+@use "../../../assets/partials/variables" as v;
+
+header {
+  width: 100%;
+  background-color: v.$background-dark;
+}
+
+.navWrapper {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  & .navItems {
+    padding: 15px 0;
+    display: flex;
+    column-gap: 10px;
+
+    & .navItem {
+      font-size: 85px;
+      text-decoration: none;
+      color: #FFFFFF;
+      //font-size: 21px;
+      transition: ease-in 0.11s;
+
+      &:hover {
+        color: green;
+        transition: ease-out 0.11s;
+
+      }
+    }
+
+    & .navItem.active {
+      color: red;
+      font-weight: 400;
+    }
+
+  }
+}
+
+

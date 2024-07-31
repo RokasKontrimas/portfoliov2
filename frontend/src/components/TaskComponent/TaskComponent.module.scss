@@ -1,0 +1,260 @@
+@use "../../assets/partials/components/button" as b;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.taskWrapper {
+  cursor: grab;
+  max-width: 300px;
+  background-color: rgba(238, 247, 255, 0.2);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  position: relative;
+
+  .taskSettings {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+  }
+
+  &:hover .taskSettings {
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+  }
+
+  & .settingsWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  & .taskEssentials {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    min-width: 150px;
+    height: fit-content;
+    z-index: 50;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    transition-behavior: allow-discrete;
+    transition-property: display opacity;
+    transition-duration: 1s;
+    opacity: 0;
+    padding: 5px 10px;
+
+    & .functionsWrapper {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    & .btnRemove {
+      cursor: pointer;
+      @include b.button {
+        padding: 3px 5px;
+      }
+
+    }
+
+    & .btnAdd {
+      cursor: pointer;
+      @include b.button {
+        padding: 3px 5px;
+
+      }
+
+    }
+
+    & .trashButton {
+      cursor: pointer;
+      transition: color 1s;
+
+      &:hover {
+        transition: color 1s;
+        color: red;
+      }
+    }
+
+    & .editButton {
+      transition: color 0.25s;
+      cursor: pointer;
+
+      &:hover {
+        transition: color 0.25s;
+        color: blue;
+      }
+    }
+  }
+
+  .taskSettings:hover + .taskEssentials,
+  .taskSettings + .taskEssentials:hover {
+    opacity: 1;
+    display: block;
+    transition: opacity 1s;
+    @starting-style {
+      opacity: 0;
+    }
+  }
+
+  & .task {
+    padding: 8px;
+    min-height: 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "title priority"
+        "duration priority";
+    align-items: center;
+    column-gap: 8px;
+
+    .taskTitle {
+      grid-area: title;
+      font-family: "Barlow", "sans-serif";
+      font-weight: 300;
+      margin: 0;
+      padding-right: 5px;
+
+    }
+
+    & .taskPriority {
+      grid-area: priority;
+      flex-shrink: 0;
+      margin-left: auto;
+      background-color: #fff;
+      right: 0;
+      margin-right: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+
+      &.low {
+        background-color: blue;
+      }
+
+      &.normal {
+        background-color: #89bd89;
+      }
+
+      &.high {
+        background-color: purple;
+      }
+
+      &.urgent {
+        background-color: red;
+      }
+    }
+
+    & .taskTimeWrapper {
+      grid-area: duration;
+      margin: 0;
+      padding-top: 16px;
+      font-family: "Barlow", "sans-serif";
+      font-weight: 400;
+
+      & .taskTime {
+        font-family: "Barlow", "sans-serif";
+        font-weight: 300;
+        font-style: italic;
+      }
+    }
+
+    .assigneesWrapper {
+      display: flex;
+      column-gap: 5px;
+      flex-wrap: wrap;
+
+      & p {
+        margin: 0;
+        padding: 2px;
+      }
+    }
+  }
+
+  & .taskDescription {
+    font-family: "Barlow", "sans-serif";
+    font-weight: 400;
+    margin: 0 0 10px;
+    padding: 0 8px;
+
+  }
+}
+
+.button {
+  @include b.button {
+    border-radius: 7px;
+  }
+}
+
+.testWrap {
+
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.show {
+  max-height: fit-content;
+  opacity: 1;
+  transition: max-height 1s ease, opacity 1s ease;
+}
+
+.btn {
+  @include b.button {
+    border-radius: 7px;
+    padding: 3px 5px;
+    font-family: "Barlow", 'sans-serif';
+    font-weight: 500;
+    font-style: normal;
+  }
+}
+
+.popupWrapper {
+  font-family: "Barlow", "sans-serif";
+
+  & .popupTitle {
+    text-align: center;
+    font-size: 16px;
+
+  }
+
+  & .buttonsWrapper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+
+    & button {
+      font-size: 14px;
+      font-weight: 400;
+      transition: color 0.5s;
+      cursor: pointer;
+      @include b.button {
+        &:first-child:hover {
+          color: green;
+          transition: color 0.5s;
+          text-decoration: underline;
+
+        }
+        &:last-child:hover {
+          color: red;
+          transition: color 0.5s;
+          text-decoration: underline;
+
+        }
+      }
+    }
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

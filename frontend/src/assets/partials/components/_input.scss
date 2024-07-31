@@ -1,0 +1,10 @@
+@mixin input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  &:focus-visible {
+    outline: none;
+    border: none;
+  }
+  @content;
+}

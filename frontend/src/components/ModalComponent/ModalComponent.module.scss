@@ -1,0 +1,121 @@
+@use '../../assets/partials/components/button' as btn;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.mainDialog {
+  width: 50%;
+  height: 100%;
+  z-index: 1000;
+  top: 0;
+  margin: 0 0 0 auto;
+  border: none;
+  box-shadow: 20px 0 20px 20px black;
+  transition: transform 1s ease, opacity 1s ease;
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+
+  &.close {
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.positionLeft {
+    margin: 0;
+    animation: slideInFromLeft 2s forwards;
+    box-shadow: -20px 0px 20px 20px black;
+    transition: box-shadow 2.5s;
+  }
+
+  &.positionRight {
+    margin: 0 0 0 auto;
+    animation: slideInFromRight 2s forwards;
+    box-shadow: 20px 0 20px 20px black;
+    transition: box-shadow 2.5s;
+
+  }
+
+  & .closeModal {
+    @include btn.button {
+      font-size: 18px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-right: 10px;
+      padding-top: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .sliderButton {
+    @include btn.button {
+      position: absolute;
+      font-size: 20px;
+      transition: transform 1s, font-size 1s;
+
+      &.leftRotate {
+        animation: rotateForward 1s forwards, slideBackwardBtn 1s backwards;
+        transform-origin: center;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%) rotate(180deg);;
+        padding-left: 10px;
+
+      }
+      &.rightRotate {
+        animation: rotateBackward 1s backwards;
+        transform-origin: center;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        padding-left: 10px;
+      }
+    }
+
+    &:hover {
+      transition: font-size 1s;
+      font-size: 24px;
+    }
+
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotateForward {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateBackward {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+

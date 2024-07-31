@@ -1,0 +1,70 @@
+{
+  "section-title": {
+    "qualifications": "Qualifications",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "about-me": "About Me",
+    "hobbies": "Hobbies",
+    "contacts": "Contacts"
+  },
+  "intro-paragraph": "Hello! I'm a passionate Full Stack Developer with a focus on creating dynamic and efficient web applications. I recently completed a 4-month internship in full stack development using Laravel and React, where I gained valuable hands-on experience in both backend and frontend technologies.",
+  "qualifications-junior-php": {
+    "title": "Junior PHP Developer:",
+    "description": "My primary expertise lies in backend development, where I have a strong foundation in PHP."
+  },
+  "qualifications-front-end-developer": {
+    "title": "Front End Developer:",
+    "description": "I have completed a 3-month intensive course in frontend development with React, enabling me to build responsive and interactive user interfaces."
+  },
+  "skills": {
+    "backend": {
+      "title": "Backend: ",
+      "description": "Proficient in PHP with a solid understanding of the Laravel framework."
+    },
+    "frontend": {
+      "title": "Frontend: ",
+      "description": "Skilled in React for developing dynamic and responsive web applications."
+    },
+    "fullstack": {
+      "title": "Fullstack: ",
+      "description": "Comfortable with integrating frontend and backend components to create cohesive applications."
+    },
+    "database-management": {
+      "title": "Database Management: ",
+      "description": "Experience with MySQL and database design."
+    },
+    "version-control": {
+      "title": "Version Control: ",
+      "description": "Proficient in using Git for version control and collaboration."
+    }
+  },
+  "experience": {
+    "title": "Full Stack junior Developer",
+    "company": "Weborigo",
+    "date": "2023/07 - 2023/11",
+    "responsibilities": {
+      "responsibility-1": "Develop UI/UX using React library",
+      "responsibility-2": "Create reusable components",
+      "responsibility-3": "Write backend part with Laravel framework",
+      "responsibility-4": "Write tests for backend (PHP unit)",
+      "responsibility-5": "Code control and versioning via Git",
+      "responsibility-6": "Write and maintain clean code"
+    }
+  },
+  "education-php-developer": {
+    "title": "PHP Junior Developer",
+    "institution": "Klaipėdos technologijų mokymų centras",
+    "dates": "2022/09 - 2023/07"
+  },
+  "education-frontend-developer": {
+    "title": "Frontend Developer (Js/React)",
+    "institution": "CodeAcademy",
+    "dates": "2024/01 - 2024/05"
+  },
+  "projects-tba": "TBA",
+  "contacts-linkedin": "LinkedIn",
+  "contacts-github": "Github",
+  "hobbies-description": "When I'm not coding, I love to immerse myself in music, which helps me relax and find inspiration for my projects. Riding my motorcycle is another passion of mine; it gives me a sense of freedom and adventure, allowing me to clear my mind and think creatively. I also value spending quality time with friends, whether it's exploring new places, engaging in deep conversations, or simply enjoying each other's company. These activities not only enrich my personal life but also bring a balanced perspective to my professional endeavors."
+}

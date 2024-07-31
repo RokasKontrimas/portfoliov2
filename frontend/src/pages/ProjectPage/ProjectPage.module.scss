@@ -1,0 +1,90 @@
+@use '../../assets/partials/components/button' as btn;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.projectBody {
+  background-color: #EEF7FF;
+}
+
+.projectWrapper {
+  margin-top: 50px;
+}
+
+.labelsWrapper {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 5px;
+  scroll-behavior: smooth;
+}
+
+.labelsWrapper::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Track */
+.labelsWrapper::-webkit-scrollbar-track {
+  background: #7AB2B2;
+}
+
+/* Handle */
+.labelsWrapper::-webkit-scrollbar-thumb {
+  background: #4D869C;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.labelsWrapper::-webkit-scrollbar-thumb:hover {
+  background: #43788a;
+}
+
+.createLabel {
+  position: relative;
+  border: none;
+  outline: none;
+  background-color: #CDE8E5;
+  min-width: 200px;
+  min-height: 400px;
+  border-radius: 7px;
+
+  & .createLabelButton {
+    @include btn.button {
+
+      font-family: "Barlow", "sans-serif";
+      font-weight: 500;
+      font-size: 18px;
+      width: 150px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 2px;
+    }
+
+    &:hover {
+      animation: easeCenter 0.5s forwards;
+    }
+  }
+}
+
+@keyframes easeCenter {
+  0% {
+    border: 1px solid rgba(45, 55, 72, 0);
+  }
+  25% {
+    border: 1px solid rgba(45, 55, 72, 0.25);
+  }
+  50% {
+    border: 1px solid rgba(45, 55, 72, 0.5);
+
+  }
+  75% {
+    border: 1px solid rgba(45, 55, 72, 0.75);
+
+  }
+  100% {
+    border: 1px solid rgba(45, 55, 72, 1);
+
+  }
+}
